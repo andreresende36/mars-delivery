@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Mars Delivery
 
 ![Mars Delivery](https://i.imgur.com/j64xA0Z.png)
