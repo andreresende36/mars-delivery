@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Mars Delivery
 
 ![Mars Delivery](https://i.imgur.com/j64xA0Z.png)
@@ -14,6 +15,7 @@ Mars Delivery é uma aplicação desenvolvida para simular entregas em Marte uti
   - [Uso](#uso)
   - [Contribuindo](#contribuindo)
   - [Contato](#contato)
+- [André Resende - andresende36@gmail.com](#andré-resende---andresende36gmailcom)
 
 ## Introdução
 
@@ -70,3 +72,4 @@ Contribuições são bem-vindas! Para contribuir com o projeto, siga as etapas a
 ## Contato
 
 André Resende - [andresende36@gmail.com](mailto:andreresende36@gmail.com)
+=======
