@@ -1,25 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Home from "./pages/Home";
+import AddressForm from "./pages/AddressForm";
+import AddressEdit from "./pages/AddressEdit";
+import { Routes, Route } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AnimatePresence mode="wait">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/address-form" element={<AddressForm />} />
+        <Route path="/address-edit" element={<AddressEdit />} />
+      </Routes>
+    </AnimatePresence>
   );
 }
 

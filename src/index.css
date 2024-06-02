@@ -1,13 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url('./pages/assets/background.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  @apply flex justify-center items-center min-h-screen
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.home-wrapper {
+  border: 1px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  @apply bg-transparent rounded-2xl p-7 flex flex-col justify-center items-center
+}
+
+.edit-wrapper {
+  border: 1px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  @apply bg-transparent rounded-2xl p-7 flex flex-col justify-center items-center w-screen max-w-2xl
+}
+
+.wrapper {
+  border: 1px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  @apply bg-transparent rounded-2xl p-7 flex flex-col justify-center items-center w-screen max-w-4xl
+}
+
+.form {
+  border: 1px solid rgba(255,255,255,.2);
+  @apply flex flex-col justify-center items-center w-full px-6 py-2  bg-neutral-100 bg-opacity-50 rounded-2xl
+}
+.input {
+  @apply mt-2 mr-2 rounded-md bg-gray-200 border-transparent focus:border-gray-500 focus:bg-gray-100 focus:ring-0 border-gray-400
+}
+.input-wrapper {
+  @apply flex w-full
+}
+
+.label {
+  @apply block text-neutral-800 text-lg font-bold mt-4
+}
+
+.label-wrapper {
+  @apply flex flex-col w-full
+}
+.btn-custom {
+  @apply h-20 w-40;
 }
