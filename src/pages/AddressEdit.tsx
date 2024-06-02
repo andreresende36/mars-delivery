@@ -12,24 +12,31 @@ import AlertComp from "../components/AlertComp";
 
 const AddressEdit = () => {
   const [isEnabled, setIsEnabled] = useState(false);
-  const { addresses, reset, editionLotNumber, setEditionLotNumber,setWarningAlert, setShowAlert } = useContext(AppContext);
+  const {
+    addresses,
+    reset,
+    editionLotNumber,
+    setEditionLotNumber,
+    setWarningAlert,
+    setShowAlert,
+  } = useContext(AppContext);
 
   const handleButton = (reset: boolean) => {
     if (reset) setEditionLotNumber("");
     if (!Object.keys(addresses).includes(editionLotNumber)) {
-      global.alert("Código não encontrado")
-      setEditionLotNumber("")
-      return
+      global.alert("Código não encontrado");
+      setEditionLotNumber("");
+      return;
     }
     setIsEnabled(!isEnabled);
   };
 
   useEffect(() => {
-    reset()
-    setEditionLotNumber("")
-    setWarningAlert(false)
-    setShowAlert(false)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    reset();
+    setEditionLotNumber("");
+    setWarningAlert(false);
+    setShowAlert(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -76,7 +83,10 @@ const AddressEdit = () => {
   };
 
   return (
-    <MotionWrapper className={isEnabled ? "wrapper" : "edit-wrapper"}>
+    <MotionWrapper
+      className={isEnabled ? "wrapper" : "edit-wrapper"}
+      key={isEnabled ? "enabled" : "disabled"}
+    >
       <div
         className={`w-full ${isEnabled ? "flex justify-between" : "text-end"}`}
       >
@@ -94,10 +104,10 @@ const AddressEdit = () => {
           <HomeButton />
         </div>
       </div>
-      {isEnabled ? <Logo size={300}/> : <Logo />}
+      {isEnabled ? <Logo size={300} /> : <Logo />}
 
       {isEnabled ? (
-        <MotionWrapper className="w-full">
+        <MotionWrapper className="w-full" key="enabled">
           <Form
             title={`Edição do endereço de lote número ${editionLotNumber}`}
             buttonText="SALVAR EDIÇÃO"
@@ -105,7 +115,9 @@ const AddressEdit = () => {
           />
         </MotionWrapper>
       ) : (
-        <MotionWrapper className="w-full">{searchInput()}</MotionWrapper>
+        <MotionWrapper className="w-full" key="disabled">
+          {searchInput()}
+        </MotionWrapper>
       )}
     </MotionWrapper>
   );
