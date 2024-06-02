@@ -2,7 +2,7 @@
 
 # Mars Delivery
 
-![Mars Delivery](mars-delivery.png)
+![Mars Delivery](https://i.imgur.com/j64xA0Z.png)
 
 Mars Delivery é uma aplicação desenvolvida para simular entregas em Marte utilizando veículos autônomos. A aplicação permite que os usuários enviem comandos para veículos que percorrem a superfície marciana, otimizando rotas de entrega de forma eficiente.
 
