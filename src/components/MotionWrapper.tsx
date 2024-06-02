@@ -7,7 +7,7 @@ interface MotionProps {
   key?: "enabled" | "disabled";
 }
 
-const MotionWrapper: React.FC<MotionProps> = ({ children, className }) => {
+const MotionWrapper: React.FC<MotionProps> = ({ children, className, key }) => {
   const pageVariants = {
     initial: {
       opacity: 0,
@@ -34,6 +34,7 @@ const MotionWrapper: React.FC<MotionProps> = ({ children, className }) => {
       variants={pageVariants}
       transition={pageTransition}
       className={className}
+      key={key}
     >
       {children}
     </motion.div>

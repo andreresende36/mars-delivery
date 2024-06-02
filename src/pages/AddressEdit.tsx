@@ -46,7 +46,6 @@ const AddressEdit = () => {
   const searchInput = () => {
     return (
       <label className="flex flex-col justify-center items-center">
-        <AlertComp className="top-2 w-fit" opacity={1} />
         <span className="text-white text-2xl font-semibold mb-3">
           Digite o lote do endereço que deseja editar
         </span>
@@ -81,7 +80,6 @@ const AddressEdit = () => {
       </label>
     );
   };
-
   return (
     <MotionWrapper
       className={isEnabled ? "wrapper" : "edit-wrapper"}
@@ -99,6 +97,9 @@ const AddressEdit = () => {
             </IconButton>
           </div>
         ) : null}
+        <div className="flex flex-col items-center justify-center w-full">
+          <AlertComp className="top-2 w-fit" opacity={1} />
+        </div>
         <div>
           <RegisterButton />
           <HomeButton />

@@ -21,7 +21,7 @@ const AlertComp: React.FC<AlertProps> = ({
       timeout = setTimeout(() => {
         setShowAlert(false);
         setWarningAlert(false);
-      }, 5000);
+      }, 3500);
     }
 
     return () => clearTimeout(timeout);
