@@ -12,6 +12,7 @@ Mars Delivery é uma aplicação desenvolvida para simular entregas em Marte uti
   - [Funcionalidades](#funcionalidades)
   - [Instalação](#instalação)
   - [Uso](#uso)
+  - [Demo](#demo)
   - [Contribuindo](#contribuindo)
   - [Contato](#contato)
 
@@ -47,6 +48,10 @@ Para rodar o projeto localmente, siga os passos abaixo:
 ## Uso
 
 Após a instalação, a aplicação pode ser acessada através de um navegador web no endereço: http://localhost:3000
+
+## Demo
+
+Uma demonstração do aplicativo rodando pode ser acessada no link [https://mars-delivery-psi.vercel.app/](https://mars-delivery-psi.vercel.app/)
 
 ## Contribuindo
 
