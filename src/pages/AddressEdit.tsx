@@ -12,10 +12,15 @@ import AlertComp from "../components/AlertComp";
 
 const AddressEdit = () => {
   const [isEnabled, setIsEnabled] = useState(false);
-  const { reset, editionLotNumber, setEditionLotNumber,setWarningAlert, setShowAlert } = useContext(AppContext);
+  const { addresses, reset, editionLotNumber, setEditionLotNumber,setWarningAlert, setShowAlert } = useContext(AppContext);
 
   const handleButton = (reset: boolean) => {
     if (reset) setEditionLotNumber("");
+    if (!Object.keys(addresses).includes(editionLotNumber)) {
+      global.alert("Código não encontrado")
+      setEditionLotNumber("")
+      return
+    }
     setIsEnabled(!isEnabled);
   };
 
