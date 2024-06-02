@@ -222,7 +222,7 @@ const Form: React.FC<FormProps> = ({
         <textarea
           value={deliveryInstructions}
           onChange={(e) => setDeliveryInstructions(e.target.value)}
-          maxLength={50}
+          maxLength={500}
           className="input h-36"
         />
       </label>
@@ -264,7 +264,7 @@ const Form: React.FC<FormProps> = ({
         <textarea
           value={spaceLandmarks}
           onChange={(e) => setSpaceLandmarks(e.target.value)}
-          maxLength={50}
+          maxLength={500}
           className="input h-36"
         />
       </label>
